@@ -14,6 +14,7 @@ A namespace has been created in vCenter.
 ```
 Infrastructure -> Kubernetes Cluster -> Create Cluster Group
 ```
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/ClGroup1.png)
 
 
 ## Register a TKG Instance (vCenter Supervisor cluster) 
@@ -22,4 +23,9 @@ Infrastructure -> Kubernetes Cluster -> Create Cluster Group
 Setup & Configuration -> Kubernetes Management -> Register TKG Instance 
 ```
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG2.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG3.png)
+
 
