@@ -9,6 +9,13 @@ Further how to get the "ole" nginx pod working.
 Assumption for this document is that vCenter is set up with Advanced Loadbalancer (AVI) or NSX-T (WCP enabled) 
 A namespace has been created in vCenter. 
 
+## Create a Cluster Group
+
+```
+Infrastructure -> Kubernetes Cluster -> Create Cluster Group
+```
+
+
 ## Register a TKG Instance (vCenter Supervisor cluster) 
 
 ```
