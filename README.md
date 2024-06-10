@@ -39,9 +39,10 @@ Note: A vCenter Supervisor cluster can only talk to TMC or to App Enginge right 
 
 ## (3) Create a workload cluster 
 
-'''
+```
 Infrastructure -> Kubernetes Cluster -> Add Cluster
-'''
+```
+
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC1.png)
 
 Create Tanzu Kuberenetes Grid Cluster
