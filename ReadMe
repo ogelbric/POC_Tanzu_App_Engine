@@ -1,0 +1,8 @@
+How to POC Tanzu App Engine (Tanzu HUB / Tanzu Platform)
+
+Tanzu Platfom is the combination of several Tanzu products into one HUB. 
+This includes the former Tanzu Service Mesh (TSM) into App engine with a touch of Tanzu Mission Control (TMC)
+
+This document will focus on how to get Tanzu Platform connected with a on-prem vCenter. 
+
+
