@@ -24,7 +24,11 @@ Setup & Configuration -> Kubernetes Management -> Register TKG Instance
 ```
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG1.png)
 
+Use the from above created cluster group
+
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG2.png)
+
+This string will be pasted into the vCenter TMC window (See below) 
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG3.png)
 
