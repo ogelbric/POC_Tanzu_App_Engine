@@ -74,3 +74,8 @@ Decide on node size and how many
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC8.png)
 
+Result
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC9.png)
+
+
