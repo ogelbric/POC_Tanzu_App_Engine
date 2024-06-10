@@ -14,4 +14,5 @@ A namespace has been created in vCenter.
 ```
 Setup & Configuration -> Kubernetes Management -> Register TKG Instance 
 ```
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG1.png)
 
