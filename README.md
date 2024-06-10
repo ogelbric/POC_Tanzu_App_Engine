@@ -32,4 +32,8 @@ This string will be pasted into the vCenter TMC window (See below)
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/RegTKG3.png)
 
+In this case the string / vCenter is already enabled
+Note: A vCenter Supervisor cluster can only talk to TMC or to App Enginge right now. Disconnect TMC before connecting Tanzu Platoform
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/vSphereTMCWindow1.png)
 
