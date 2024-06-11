@@ -87,6 +87,7 @@ Result
 
 ```
 Application Spaces -> Capabilities -> Avaliable -> Select -> Install
+```
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/cgcap1.png)
 
