@@ -53,8 +53,8 @@ Select Supervisor Cluster and Namespace
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC3.png)
 
-Dcide on cluster name a use Cluster Group created earlier and most important Step
-Label The cluster !!!
+Decide on cluster name a use Cluster Group created earlier and most important Step
+Label The Cluster (somthing better then in my case mycluster) !!!
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC4.png)
 
