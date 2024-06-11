@@ -141,5 +141,15 @@ Cluster Capabilities vs. Space Capabilities matchup (things are not in alinment)
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirticapabilitiesclustergroupandspace.png)
 
+# Tanzu login (was not obvious to me...) 
 
+```
+When a tanzu login is used a URL is being displayd whch needs to be pasted into a browser
+```
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin1.png)
+
+```
+The result is a strange screen from which the token for the "password" answer has to be used
+```
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin2.png)
 
