@@ -87,7 +87,7 @@ Result
 
 
 
-# Tips and tricks
+# Tips and Tricks
 # Space enablement turns yellow
 In my case the cause was that the capabilities in the space and in the cluster group did not match. 
 
