@@ -91,8 +91,9 @@ Result
 # Space enablement turns yellow
 In my case the cause was that the capabilities in the space and in the cluster group did not match. 
 
-![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/orfspaceyellow.png)
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirtiyellowspace.png)
 
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirticapabilitiesclustergroupandspace.png)
 
 
 
