@@ -95,6 +95,24 @@ Application Spaces -> Capabilities -> Avaliable -> Select -> Install
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/cgcap3.png)
 
+## (5) Create a Profile
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof2.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof3.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof4.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof5.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof6.png)
+
+
+
+
+
 
 # Tips and Tricks
 # Space enablement turns yellow
