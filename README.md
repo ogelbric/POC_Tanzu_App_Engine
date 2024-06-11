@@ -83,8 +83,16 @@ Result
 (Notice the label) 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC9.png)
 
+## (4) Install into the Cluster Group Capabilities
 
+```
+Application Spaces -> Capabilities -> Avaliable -> Select -> Install
 
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/cgcap1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/cgcap2.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/cgcap3.png)
 
 
 # Tips and Tricks
