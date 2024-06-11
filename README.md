@@ -84,9 +84,10 @@ Result
 
 # Tips and tricks
 # Space enablement turns yellow
-In my case the cuase was that the capabilities in the space and in the cluster group did not match. 
+In my case the cause was that the capabilities in the space and in the cluster group did not match. 
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/orfspaceyellow.png)
+
 
 
 
