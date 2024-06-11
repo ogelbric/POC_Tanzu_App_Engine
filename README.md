@@ -109,6 +109,11 @@ Application Spaces -> Capabilities -> Avaliable -> Select -> Install
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof6.png)
 
+## (6) Create a Space
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/sp1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/sp2.png)
 
 
 
