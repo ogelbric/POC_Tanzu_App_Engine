@@ -93,6 +93,8 @@ In my case the cause was that the capabilities in the space and in the cluster g
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirtiyellowspace.png)
 
+Cluster capabilities vs. Space Capabilities matchup (things are not in alinment) 
+
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirticapabilitiesclustergroupandspace.png)
 
 
