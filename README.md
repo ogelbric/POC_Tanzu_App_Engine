@@ -9,6 +9,11 @@ how to get the "ole" nginx pod working (i.e. Random cutomer application).
 Assumption for this document is that vCenter is set up with Advanced Loadbalancer (AVI) or NSX-T (WCP enabled) 
 A namespace has been created in vCenter (with everything in working order in the namespace). 
 
+## Select the VMware Tanzu platofrm Tile from the cloud console
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
+
+
 ## (1) Create a Cluster Group
 
 ```
