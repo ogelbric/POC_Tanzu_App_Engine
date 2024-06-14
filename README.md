@@ -132,14 +132,6 @@ Here comes my ill choosen cluster label into play
 
 
 # Tips and Tricks
-# Space enablement turns yellow
-In my case the cause was that the capabilities in the space and in the cluster group did not match. 
-
-![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirtiyellowspace.png)
-
-Cluster Capabilities vs. Space Capabilities matchup (things are not in alinment) 
-
-![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirticapabilitiesclustergroupandspace.png)
 
 # Tanzu login (was not obvious to me...) 
 
@@ -154,6 +146,7 @@ The result is a strange screen from which the token for the "password" answer ha
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin2.png)
 
 # The other way to log in is via sourcing a file
+
 The org ID is in the GUI Console (upper right hand corner and the API token is under User Settings My Account)
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/org1.png)
@@ -304,5 +297,68 @@ Deleting the context entry from the config will remove it from the list of track
 23
 [root@orfdns ~]#
 
+```
+# Space enablement turns yellow
+
+In my case the cause was that the capabilities in the space and in the cluster group did not match (Kirti's example in picture). 
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirtiyellowspace.png)
+
+Cluster Capabilities vs. Space Capabilities matchup (things are not in alinment) 
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/kirticapabilitiesclustergroupandspace.png)
+
+Automate way to analyse the space vs. cluster group differences
+
+```
+export proj="AMER-East"
+export sp="orfspace1"
+export org="sa-tanzu-platform"
+export cl="orfclustergroup"
+export w=''
+#export w='--wide'
+export line="-----------------------------------------------------------------"
+yes | tanzu context delete $org
+source ./tanzucli.src
+tanzu login
+tanzu project use $proj
+tanzu operations clustergroup use  $cl
+echo $line > /tmp/clustergroup.txt
+echo "Cluster Group Capabilities" >>  /tmp/clustergroup.txt
+echo $line >> /tmp/clustergroup.txt
+k get kubernetescluster orfscluster -o yaml | grep -A 1000 capabilities: | grep name: | awk '{ print $2 }' | sort >> /tmp/clustergroup.txt
+tanzu space use $sp 
+echo $line > /tmp/space.txt
+echo "Space Capabilities" >>  /tmp/space.txt
+echo $line >> /tmp/space.txt
+tanzu space get orfspace1 | grep  -e '^   -' | awk '{ print $2 }' | sort >> /tmp/space.txt
+sdiff /tmp/clustergroup.txt /tmp/space.txt
+#
+```
+
+Outcome: In my case the clustergroup has more but more importanlly the space capablities exist in the cluster group. 
+
+```
+sdiff /tmp/clustergroup.txt /tmp/space.txt
+-------------------------------------------------------------   -------------------------------------------------------------
+Cluster Group Capabilities                                    | Space Capabilities
+-------------------------------------------------------------   -------------------------------------------------------------
+bitnami.services.tanzu.vmware.com                             <
+certificates.tanzu.vmware.com                                   certificates.tanzu.vmware.com
+config-server.spring.tanzu.vmware.com                         <
+container-app.tanzu.vmware.com                                  container-app.tanzu.vmware.com
+crossplane.tanzu.vmware.com                                   <
+egress.tanzu.vmware.com                                       <
+fluxcd-helm.tanzu.vmware.com                                  <
+fluxcd-source.tanzu.vmware.com                                <
+k8sgateway.tanzu.vmware.com                                   <
+mtls.tanzu.vmware.com                                         <
+multicloud-ingress.tanzu.vmware.com                           <
+observability.tanzu.vmware.com                                <
+package-management.tanzu.vmware.com                           <
+registry-pull-only-credentials-installer.tanzu.vmware.com     <
+servicebinding.tanzu.vmware.com                               <
+servicemesh-observability.tanzu.vmware.com                    <
+[root@orfdns ~]# 
 ```
 
