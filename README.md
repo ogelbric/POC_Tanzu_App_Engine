@@ -155,18 +155,28 @@ The result is a strange screen from which the token for the "password" answer ha
 
 # The other way to log in is via sourcing a file
 The org ID is in the GUI Console (upper right hand corner and the API token is under User Settings My Account)
-```
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/org1.png)
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tok1.png)
 
-
+```
 cat tanzucli.src
 export TANZU_CLI_CLOUD_SERVICES_ORGANIZATION_ID=77aee83b-308f-BBBB-AAAA-3f7a6f19ba75
 export TANZU_CLI_OAUTH_LOCAL_LISTENER_PORT=9090
 export TANZU_API_TOKEN=_fGOgUtC-sazFVgfjgdGakxLxV_your_token_here_Z5xVWJGUO1T9vfJEej-fOU
 ```
+# Study in api-resources in various stages with in the tanzu cli
+In the tanzu cli the context is the key to be able to do certain things.
+Hence the different api-resources available at different stages
+The stages I looked at are:
+Login
+Project
+Cluster Group
+Space
+
+Please adjust in the script the variables for your environment 
+(Further I have the API token in a file)
 
 ```
 export proj="AMER-East"
