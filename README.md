@@ -144,7 +144,7 @@ Cluster Capabilities vs. Space Capabilities matchup (things are not in alinment)
 # Tanzu login (was not obvious to me...) 
 
 ```
-When a tanzu login is used a URL is being displayd whch needs to be pasted into a browser
+When a tanzu login is used a URL is being displayd which needs to be pasted into a browser
 ```
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin1.png)
 
@@ -154,8 +154,14 @@ The result is a strange screen from which the token for the "password" answer ha
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin2.png)
 
 # The other way to log in is via sourcing a file
-
+The org ID is in the GUI Console (upper right hand corner and the API token is under User Settings My Account)
 ```
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/org1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tok1.png)
+
+
 cat tanzucli.src
 export TANZU_CLI_CLOUD_SERVICES_ORGANIZATION_ID=77aee83b-308f-BBBB-AAAA-3f7a6f19ba75
 export TANZU_CLI_OAUTH_LOCAL_LISTENER_PORT=9090
