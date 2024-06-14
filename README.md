@@ -218,6 +218,91 @@ tanzu context list  $w
 tanzu project unset 
 tanzu context list  $w
 k api-resources | wc -l
+#
+
+```
+
+The output (Notice: The various api-resources (wc -l) 23-29-27-20-23)
+
+```
+
+[root@orfdns ~]# 
+[root@orfdns ~]# export proj="AMER-East"
+[root@orfdns ~]# export sp="orfspace1"
+[root@orfdns ~]# export org="sa-tanzu-platform"
+[root@orfdns ~]# export cl="orfclustergroup"
+[root@orfdns ~]# export w=''
+[root@orfdns ~]# #export w='--wide'
+[root@orfdns ~]# #
+[root@orfdns ~]# #Results in 23 api-resources - just loggin in
+[root@orfdns ~]# #
+[root@orfdns ~]# yes | tanzu context delete $org
+Deleting the context entry from the config will remove it from the list of tracked contexts. You will need to use `tanzu context create` to re-create this context. Are you sure you want to continue? [y/N]: [i] Deleting kubeconfig context 'tanzu-cli-sa-tanzu-platform' from the file '/root/.config/tanzu/kube/config'
+[!] WARNING: this removed your active context, use "kubectl config use-context" to select a different one
+[ok] Successfully deleted context "sa-tanzu-platform"
+[root@orfdns ~]# source ./tanzucli.src
+[root@orfdns ~]# tanzu login
+[i] API token env var is set
+
+[ok] Successfully logged into 'sa-tanzu-platform' organization and created a tanzu context
+[root@orfdns ~]# tanzu context list $w
+  NAME               ISACTIVE  TYPE   PROJECT  SPACE  
+  sa-tanzu-platform  true      tanzu                  
+
+[i] Use '--wide' to view additional columns.
+[root@orfdns ~]# k api-resources | wc -l
+23
+[root@orfdns ~]# #
+[root@orfdns ~]# #Results in 29 api-resources - setting the Project
+[root@orfdns ~]# #
+[root@orfdns ~]# tanzu project use $proj
+✓ Successfully set project to AMER-East
+[root@orfdns ~]# tanzu context list  $w
+  NAME               ISACTIVE  TYPE   PROJECT    SPACE  
+  sa-tanzu-platform  true      tanzu  AMER-East         
+
+[i] Use '--wide' to view additional columns.
+[root@orfdns ~]# k api-resources | wc -l
+29
+[root@orfdns ~]# #
+[root@orfdns ~]# #Results in 27 api-resources - setting the cluster group
+[root@orfdns ~]# #
+[root@orfdns ~]# tanzu operations clustergroup use  $cl
+ℹ  project has been set to AMER-East
+ℹ  successfully set clustergroup to orfclustergroup
+[root@orfdns ~]# tanzu context list  $w
+  NAME               ISACTIVE  TYPE   PROJECT    SPACE  CLUSTERGROUP     
+  sa-tanzu-platform  true      tanzu  AMER-East         orfclustergroup  
+
+[i] Use '--wide' to view additional columns.
+[root@orfdns ~]# k api-resources | wc -l
+27
+[root@orfdns ~]# #
+[root@orfdns ~]# #
+[root@orfdns ~]# #Results in 20 api-resources - setting the space
+[root@orfdns ~]# #
+[root@orfdns ~]# tanzu space use $sp 
+✓ Successfully set space to orfspace1
+[root@orfdns ~]# k api-resources | wc -l
+20
+[root@orfdns ~]# tanzu context list  $w
+  NAME               ISACTIVE  TYPE   PROJECT    SPACE      
+  sa-tanzu-platform  true      tanzu  AMER-East  orfspace1  
+
+[i] Use '--wide' to view additional columns.
+[root@orfdns ~]# #
+[root@orfdns ~]# #Results in 23 api-rsrources - unsetting the project
+[root@orfdns ~]# #
+[root@orfdns ~]# tanzu project unset 
+✓ Successfully unset the project, using org sa-tanzu-platform
+[root@orfdns ~]# tanzu context list  $w
+  NAME               ISACTIVE  TYPE   PROJECT  SPACE  
+  sa-tanzu-platform  true      tanzu                  
+
+[i] Use '--wide' to view additional columns.
+[root@orfdns ~]# k api-resources | wc -l
+23
+[root@orfdns ~]#
 
 ```
 
