@@ -153,3 +153,55 @@ The result is a strange screen from which the token for the "password" answer ha
 ```
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tlogin2.png)
 
+# The other way to log in is via sourcing a file
+
+```
+cat tanzucli.src
+export TANZU_CLI_CLOUD_SERVICES_ORGANIZATION_ID=77aee83b-308f-BBBB-AAAA-3f7a6f19ba75
+export TANZU_CLI_OAUTH_LOCAL_LISTENER_PORT=9090
+export TANZU_API_TOKEN=_fGOgUtC-sazFVgfjgdGakxLxV_your_token_here_Z5xVWJGUO1T9vfJEej-fOU
+```
+
+```
+export proj="AMER-East"
+export sp="orfspace1"
+export org="sa-tanzu-platform"
+export cl="orfclustergroup"
+export w=''
+#export w='--wide'
+#
+#Results in 23 api-resources - just loggin in
+#
+yes | tanzu context delete $org
+source ./tanzucli.src
+tanzu login
+tanzu context list $w
+k api-resources | wc -l
+#
+#Results in 29 api-resources - setting the Project
+#
+tanzu project use $proj
+tanzu context list  $w
+k api-resources | wc -l
+#
+#Results in 27 api-resources - setting the cluster group
+#
+tanzu operations clustergroup use  $cl
+tanzu context list  $w
+k api-resources | wc -l
+#
+#
+#Results in 20 api-resources - setting the space
+#
+tanzu space use $sp 
+k api-resources | wc -l
+tanzu context list  $w
+#
+#Results in 23 api-rsrources - unsetting the project
+#
+tanzu project unset 
+tanzu context list  $w
+k api-resources | wc -l
+
+```
+
