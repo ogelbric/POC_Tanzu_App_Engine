@@ -172,6 +172,7 @@ Please adjust in the script the variables for your environment
 (Further I have the API token in a file)
 
 ```
+source tanzucli.src
 export proj="AMER-East"
 export sp="orfspace1"
 export org="sa-tanzu-platform"
@@ -311,6 +312,7 @@ Cluster Capabilities vs. Space Capabilities matchup (things are not in alinment)
 Automate way to analyse the space vs. cluster group differences
 
 ```
+source tanzucli.src
 export proj="AMER-East"
 export sp="orfspace1"
 export org="sa-tanzu-platform"
