@@ -128,7 +128,9 @@ Here comes my ill choosen cluster label into play
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/sp3.png)
 
+## (8) Create my first simple app
 
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine_app1/tree/main/README.md)
 
 
 # Tips and Tricks
