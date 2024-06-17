@@ -130,7 +130,7 @@ Here comes my ill choosen cluster label into play
 
 ## (8) Create my first simple app (Follow link)
 
-![My First Simple App](https://github.com/ogelbric/POC_Tanzu_App_Engine_app1/blob/main/README.md)
+[My First Simple App](https://github.com/ogelbric/POC_Tanzu_App_Engine_app1/blob/main/README.md)
 
 # Tips and Tricks
 
