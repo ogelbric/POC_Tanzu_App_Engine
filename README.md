@@ -156,7 +156,7 @@ The org ID is in the GUI Console (upper right hand corner and the API token is u
 
 ```
 cat tanzucli.src
-export TANZU_CLI_CLOUD_SERVICES_ORGANIZATION_ID=77aee83b-308f-BBBB-AAAA-3f7a6f19ba75
+export TANZU_CLI_CLOUD_SERVICES_ORGANIZATION_ID=77aee83b-308f-BBBB-AAAA-3xxxxxxxxx5
 export TANZU_CLI_OAUTH_LOCAL_LISTENER_PORT=9090
 export TANZU_API_TOKEN=_fGOgUtC-sazFVgfjgdGakxLxV_your_token_here_Z5xVWJGUO1T9vfJEej-fOU
 ```
