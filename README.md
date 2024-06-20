@@ -337,7 +337,7 @@ echo "Space Capabilities" >>  /tmp/space.txt
 echo $line >> /tmp/space.txt
 tanzu space get orfspace1 | grep  -e '^   -' | awk '{ print $2 }' | sort >> /tmp/space.txt
 sdiff /tmp/clustergroup.txt /tmp/space.txt
-tanzu space get orfspace1  | grep -A 10 Profiles | grep -B 10 Availability | grep -v Availability | grep -v Profiles | sed  '/^$/d' | awk '{ print $1}' > /tmp/prof.txt
+tanzu space get $sp  | grep -A 10 Profiles | grep -B 10 Availability | grep -v Availability | grep -v Profiles | sed  '/^$/d' | awk '{ print $1}' > /tmp/prof.txt
 for f in `cat /tmp/prof.txt` 
 do
 echo $line
