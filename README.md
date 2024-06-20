@@ -314,6 +314,7 @@ Automate way to analyse the space vs. cluster group differences
 
 ```
 source tanzucli.src
+export KUBECONFIG="/root/.config/tanzu/kube/config"
 export proj="AMER-East"
 export sp="orfspace1"
 export org="sa-tanzu-platform"
@@ -336,13 +337,21 @@ echo "Space Capabilities" >>  /tmp/space.txt
 echo $line >> /tmp/space.txt
 tanzu space get orfspace1 | grep  -e '^   -' | awk '{ print $2 }' | sort >> /tmp/space.txt
 sdiff /tmp/clustergroup.txt /tmp/space.txt
-#
+tanzu space get orfspace1  | grep -A 10 Profiles | grep -B 10 Availability | grep -v Availability | grep -v Profiles | sed  '/^$/d' | awk '{ print $1}' > /tmp/prof.txt
+for f in `cat /tmp/prof.txt` 
+do
+echo $line
+echo $f
+echo $line
+tanzu profile get $f | grep -A 100 Capabilities
+done
+
 ```
 
 Outcome: In my case the clustergroup has more but more importanlly the space capablities exist in the cluster group. 
 
 ```
-sdiff /tmp/clustergroup.txt /tmp/space.txt
+[root@orfdns ~]# sdiff /tmp/clustergroup.txt /tmp/space.txt
 -------------------------------------------------------------   -------------------------------------------------------------
 Cluster Group Capabilities                                    | Space Capabilities
 -------------------------------------------------------------   -------------------------------------------------------------
@@ -351,17 +360,76 @@ certificates.tanzu.vmware.com                                   certificates.tan
 config-server.spring.tanzu.vmware.com                         <
 container-app.tanzu.vmware.com                                  container-app.tanzu.vmware.com
 crossplane.tanzu.vmware.com                                   <
-egress.tanzu.vmware.com                                       <
+egress.tanzu.vmware.com                                         egress.tanzu.vmware.com
 fluxcd-helm.tanzu.vmware.com                                  <
 fluxcd-source.tanzu.vmware.com                                <
-k8sgateway.tanzu.vmware.com                                   <
+k8sgateway.tanzu.vmware.com                                     k8sgateway.tanzu.vmware.com
 mtls.tanzu.vmware.com                                         <
-multicloud-ingress.tanzu.vmware.com                           <
+multicloud-ingress.tanzu.vmware.com                             multicloud-ingress.tanzu.vmware.com
 observability.tanzu.vmware.com                                <
-package-management.tanzu.vmware.com                           <
+package-management.tanzu.vmware.com                             package-management.tanzu.vmware.com
 registry-pull-only-credentials-installer.tanzu.vmware.com     <
 servicebinding.tanzu.vmware.com                               <
 servicemesh-observability.tanzu.vmware.com                    <
-[root@orfdns ~]# 
+[root@orfdns ~]# tanzu space get orfspace1  | grep -A 10 Profiles | grep -B 10 Availability | grep -v Availability | grep -v Profiles | sed  '/^$/d' | awk '{ print $1}' > /tmp/prof.txt
+[root@orfdns ~]# for f in `cat /tmp/prof.txt` 
+> do
+> echo $line
+> echo $f
+> echo $line
+> tanzu profile get $f | grep -A 100 Capabilities
+> done
+-----------------------------------------------------------------
+orfprofile1
+-----------------------------------------------------------------
+Required Capabilities
+   - certificates.tanzu.vmware.com
+   - container-app.tanzu.vmware.com
+   - k8sgateway.tanzu.vmware.com
+   - package-management.tanzu.vmware.com
+
+Traits
+   carvel-package-installer.tanzu.vmware.com - Resolved
+    └─ carvel-package-installer
+       └─ serviceAccountName: carvel-package-installer (editable)
+
+
+-----------------------------------------------------------------
+orf-custom-networking
+-----------------------------------------------------------------
+Required Capabilities
+   - certificates.tanzu.vmware.com
+   - egress.tanzu.vmware.com
+   - multicloud-ingress.tanzu.vmware.com
+
+Traits
+   egress.tanzu.vmware.com - Resolved
+    └─ egress.tanzu.vmware.com
+       └─ open: false (editable)
+
+   multicloud-cert-manager.tanzu.vmware.com - Resolved
+    └─ multicloud-cert-manager.tanzu.vmware.com
+       ├─ duration: 87600h (editable)
+       ├─ name: default-issuer (editable)
+       ├─ privateKey
+       │  ├─ algorithm: ECDSA (editable)
+       │  └─ size: 384 (editable)
+       ├─ renewBefore: 2160h (editable)
+       └─ selfSigned
+          ├─ commonName: ca.company.biz (editable)
+          └─ secretName: root-secret (editable)
+
+   multicloud-ingress.tanzu.vmware.com - Resolved
+    └─ multicloud-ingress.tanzu.vmware.com
+       ├─ domain: tanzu.gelbrich.com (editable)
+       ├─ gslb
+       │  ├─ authentication
+       │  │  └─ credentialRef: 02a169d1ffc75ae6b5bd55b2f7083e46 (editable)
+       │  └─ dns
+       │     └─ zoneId: Z05743862R5IXV6RNKGKE (editable)
+       ├─ listenerTemplates: [map[namePrefix:https- port:443 protocol:HTTPS tls:map[secretRef:prod-certs]] map[namePrefix:http- port:80 protocol:HTTP]] (editable)
+       ├─ name: default-gateway (editable)
+       └─ useClusterIssuer: false (editable)
+
 ```
 
