@@ -10,6 +10,13 @@ Assumption for this document is that vCenter is set up with Advanced Loadbalance
 A namespace has been created in vCenter (with everything in working order in the namespace). 
 
 ## Select the VMware Tanzu Platform Tile from the Cloud Console
+Need to double check this section: 
+  Port 443 TMC outbound connectivity
+
+  https://docs.vmware.com/en/VMware-Tanzu-Mission-Control/services/tanzumc-concepts/GUID-147472ED-16BB-4AAA-9C35-A951C5ADA88A.html
+
+  *.tmc.cloud.vmware.com
+  console.cloud.vmware.com
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
 
