@@ -174,6 +174,7 @@ Please adjust in the script the variables for your environment
 
 ```
 source tanzucli.src
+export KUBECONFIG="/root/.config/tanzu/kube/config"
 export proj="AMER-East"
 export sp="orfspace1"
 export org="sa-tanzu-platform"
