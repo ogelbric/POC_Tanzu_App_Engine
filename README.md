@@ -35,7 +35,7 @@ Currently unable to find similar section for Tanzu Platform (Made the internal T
     Tips and Tricks
 ```
 
-## Console Tile (https://console.cloud.vmware.com/)
+## Console Tile (https://console.cloud.vmware.com/)(In my case my user ID is in an organization that has access to the tile (see doc))
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
 
