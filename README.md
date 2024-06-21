@@ -22,6 +22,18 @@ Currently unable to find similar section for Tanzu Platform (Made the internal T
 
   https://docs.vmware.com/en/VMware-Tanzu-Platform/index.html
 ```
+##  What are the Steps?
+```
+(1) Create a Cluster Group
+(2) Register a TKG Instance (vCenter Supervisor cluster) 
+(3) Create a workload cluster 
+(4) Install Cluster Group Capabilities
+(5) Create a Profile
+(6) Create an Availability Target
+(7) Create a Space
+(8) Create my first simple app (Follow link)
+    Tips and Tricks
+```
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
 
@@ -95,7 +107,7 @@ Result
 (Notice the label) 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/CC9.png)
 
-## (4) Install into the Cluster Group Capabilities
+## (4) Install Cluster Group Capabilities
 
 ```
 Application Spaces -> Capabilities -> Avaliable -> Select -> Install
