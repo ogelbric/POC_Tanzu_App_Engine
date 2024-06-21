@@ -4,7 +4,7 @@ Tanzu Platfom is the combination of several Tanzu products into one (Hub).
 This includes the former Tanzu Service Mesh (TSM) and Tanzu Mission Control (TMC) and more...
 
 This document will focus on how to get Tanzu Platform connected with an on-prem vCenter and 
-how to get the "ole" nginx pod working (i.e. Random customer application). 
+how to get the "ole" nginx pod working (i.e. Random Customer Application). 
 
 Assumption for this document is that vCenter is set up with Advanced Loadbalancer (AVI) or NSX-T (WCP enabled) 
 A namespace has been created in vCenter (with everything in working order in the namespace). 
