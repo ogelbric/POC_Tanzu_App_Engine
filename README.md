@@ -11,13 +11,16 @@ A namespace has been created in vCenter (with everything in working order in the
 
 ## Select the VMware Tanzu Platform Tile from the Cloud Console
 ```
-Need to double check this section: 
+Currently unable to find similar section for Tanzu Platform (Made the internal TP channel aware) :
+ 
   Port 443 TMC outbound connectivity
 
   https://docs.vmware.com/en/VMware-Tanzu-Mission-Control/services/tanzumc-concepts/GUID-147472ED-16BB-4AAA-9C35-A951C5ADA88A.html
 
   *.tmc.cloud.vmware.com
   console.cloud.vmware.com
+
+  https://docs.vmware.com/en/VMware-Tanzu-Platform/index.html
 ```
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/tanzuplatform1.png)
