@@ -136,6 +136,13 @@ Application Spaces -> Capabilities -> Avaliable -> Select -> Install
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/prof6.png)
 
+For Metrix to be in your cluster please add obersability to the profile
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/metrixprofile1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/metrixprofile2.png)
+
+
 ## (6) Create an Availability Target
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/at1.png)
@@ -460,6 +467,16 @@ Traits
        └─ useClusterIssuer: false (editable)
 
 ```
+
+# Register Credentials
+
+They are handled in the cluster capabilities
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/regcreds1.png)
+
+![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/regcreds2.png)
+
+
 
 Other Tools: 
 
