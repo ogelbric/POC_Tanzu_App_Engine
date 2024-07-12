@@ -32,7 +32,12 @@ Currently unable to find similar section for Tanzu Platform (Made the internal T
 (6) Create an Availability Target
 (7) Create a Space
 (8) Create my first simple app (Follow link)
-    Tips and Tricks
+(9) Tips and Tricks
+      api-resource study
+      capabilities / space analysis
+      Reg Creads
+      Aliases
+
 ```
 
 ## Console Tile (https://console.cloud.vmware.com/) 
@@ -476,6 +481,16 @@ They are handled in the cluster capabilities
 
 ![Version](https://github.com/ogelbric/POC_Tanzu_App_Engine/blob/main/regcreds2.png)
 
+# Good to have aliases
+
+```
+alias l1='kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name orfscluster1 --insecure-skip-tls-verify'
+alias l2='kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name orfscluster2 --insecure-skip-tls-verify'
+alias l3='kubectl vsphere login --server 192.168.5.90 --vsphere-username administrator@vsphere.local --tanzu-kubernetes-cluster-namespace namespace1000 --tanzu-kubernetes-cluster-name orfscluster3 --insecure-skip-tls-verify'
+alias tk='kubectl --kubeconfig ~/.config/tanzu/kube/config'
+alias k='kubectl --kubeconfig ~/.kube/config'
+alias t='tanzu'
+```
 
 
 Other Tools: 
