@@ -501,3 +501,172 @@ https://github.com/ogelbric/POC_Tanzu_App_Engine_Space_Trouble_Sooting_v1
 
 ```
 
+# Tanzu CLI plugin update / check script
+
+```
+[root@orfdns ~]# ./tanzupluginanalysis.sh
+----------------------------------------------------------------------------------------
+accelerator kubernetes v1.10.0           upgradable to --> accelerator kubernetes v1.11.0
+apply operations v0.1.7                  same version ---> apply operations v0.1.7
+apps kubernetes v0.13.0                  same version ---> apps kubernetes v0.13.0
+appsv2 global v0.2.2                     upgradable to --> appsv2 global v0.3.0
+build global v0.9.2                      same version ---> build global v0.9.2
+build-service kubernetes v1.0.0          same version ---> build-service kubernetes v1.0.0
+clustergroup operations v0.1.10          same version ---> clustergroup operations v0.1.10
+cluster operations v0.2.6                upgradable to --> cluster operations v0.2.7
+context mission-control v0.1.15          same version ---> context mission-control v0.1.15
+ekscluster operations v0.1.4             same version ---> ekscluster operations v0.1.4
+external-secrets kubernetes v0.1.0       same version ---> external-secrets kubernetes v0.1.0
+iam operations v0.1.9                    same version ---> iam operations v0.1.9
+imgpkg global v0.3.5                     same version ---> imgpkg global v0.3.5
+insight kubernetes v1.10.0               same version ---> insight kubernetes v1.10.0
+isolated-cluster global v0.32.2          upgradable to --> isolated-cluster global v0.33.1
+management-cluster kubernetes v0.32.2    upgradable to --> management-cluster kubernetes v0.33.1
+management-cluster operations v0.1.4     same version ---> management-cluster operations v0.1.4
+package kubernetes v0.35.0               same version ---> package kubernetes v0.35.0
+pinniped-auth global v0.32.2             upgradable to --> pinniped-auth global v3.1.0
+policy operations v0.1.12                same version ---> policy operations v0.1.12
+project global v0.2.0                    upgradable to --> project global v0.2.2
+provider-eks-cluster operations v0.1.4   same version ---> provider-eks-cluster operations v0.1.4
+rbac global v0.1.1                       upgradable to --> rbac global v0.1.2
+resource global v0.1.0                   upgradable to --> resource global v0.2.1
+secret kubernetes v0.33.1                same version ---> secret kubernetes v0.33.1
+services kubernetes v0.10.0              upgradable to --> services kubernetes v0.11.1
+space global v0.2.0                      upgradable to --> space global v0.2.2
+telemetry global v1.1.0                  same version ---> telemetry global v1.1.0
+telemetry kubernetes v0.33.1             same version ---> telemetry kubernetes v0.33.1
+----------------------------------------------------------------------------------------
+[root@orfdns ~]# ./tanzupluginanalysis.sh --upgrade --test
+----------------------------------------------------------------------------------------
+accelerator kubernetes v1.10.0           upgradable to --> accelerator kubernetes v1.11.0
+tanzu plugin upgrade accelerator --target kubernetes
+apply operations v0.1.7                  same version ---> apply operations v0.1.7
+apps kubernetes v0.13.0                  same version ---> apps kubernetes v0.13.0
+appsv2 global v0.2.2                     upgradable to --> appsv2 global v0.3.0
+tanzu plugin upgrade appsv2 --target global
+build global v0.9.2                      same version ---> build global v0.9.2
+build-service kubernetes v1.0.0          same version ---> build-service kubernetes v1.0.0
+clustergroup operations v0.1.10          same version ---> clustergroup operations v0.1.10
+cluster operations v0.2.6                upgradable to --> cluster operations v0.2.7
+tanzu plugin upgrade cluster --target operations
+context mission-control v0.1.15          same version ---> context mission-control v0.1.15
+ekscluster operations v0.1.4             same version ---> ekscluster operations v0.1.4
+external-secrets kubernetes v0.1.0       same version ---> external-secrets kubernetes v0.1.0
+iam operations v0.1.9                    same version ---> iam operations v0.1.9
+imgpkg global v0.3.5                     same version ---> imgpkg global v0.3.5
+insight kubernetes v1.10.0               same version ---> insight kubernetes v1.10.0
+isolated-cluster global v0.32.2          upgradable to --> isolated-cluster global v0.33.1
+tanzu plugin upgrade isolated-cluster --target global
+management-cluster kubernetes v0.32.2    upgradable to --> management-cluster kubernetes v0.33.1
+tanzu plugin upgrade management-cluster --target kubernetes
+management-cluster operations v0.1.4     same version ---> management-cluster operations v0.1.4
+package kubernetes v0.35.0               same version ---> package kubernetes v0.35.0
+pinniped-auth global v0.32.2             upgradable to --> pinniped-auth global v3.1.0
+tanzu plugin upgrade pinniped-auth --target global
+policy operations v0.1.12                same version ---> policy operations v0.1.12
+project global v0.2.0                    upgradable to --> project global v0.2.2
+tanzu plugin upgrade project --target global
+provider-eks-cluster operations v0.1.4   same version ---> provider-eks-cluster operations v0.1.4
+rbac global v0.1.1                       upgradable to --> rbac global v0.1.2
+tanzu plugin upgrade rbac --target global
+resource global v0.1.0                   upgradable to --> resource global v0.2.1
+tanzu plugin upgrade resource --target global
+secret kubernetes v0.33.1                same version ---> secret kubernetes v0.33.1
+services kubernetes v0.10.0              upgradable to --> services kubernetes v0.11.1
+tanzu plugin upgrade services --target kubernetes
+space global v0.2.0                      upgradable to --> space global v0.2.2
+tanzu plugin upgrade space --target global
+telemetry global v1.1.0                  same version ---> telemetry global v1.1.0
+telemetry kubernetes v0.33.1             same version ---> telemetry kubernetes v0.33.1
+----------------------------------------------------------------------------------------
+[root@orfdns ~]# ./tanzupluginanalysis.sh --upgrade --yes
+----------------------------------------------------------------------------------------
+accelerator kubernetes v1.10.0           upgradable to --> accelerator kubernetes v1.11.0
+[i] Installed plugin 'accelerator:v1.11.0' with target 'kubernetes'
+[ok] successfully upgraded plugin 'accelerator'
+apply operations v0.1.7                  same version ---> apply operations v0.1.7
+apps kubernetes v0.13.0                  same version ---> apps kubernetes v0.13.0
+appsv2 global v0.2.2                     upgradable to --> appsv2 global v0.3.0
+[i] Installed plugin 'appsv2:v0.3.0' with target 'global'
+[ok] successfully upgraded plugin 'appsv2'
+build global v0.9.2                      same version ---> build global v0.9.2
+build-service kubernetes v1.0.0          same version ---> build-service kubernetes v1.0.0
+clustergroup operations v0.1.10          same version ---> clustergroup operations v0.1.10
+cluster operations v0.2.6                upgradable to --> cluster operations v0.2.7
+[i] Installed plugin 'cluster:v0.2.7' with target 'operations'
+[ok] successfully upgraded plugin 'cluster'
+context mission-control v0.1.15          same version ---> context mission-control v0.1.15
+ekscluster operations v0.1.4             same version ---> ekscluster operations v0.1.4
+external-secrets kubernetes v0.1.0       same version ---> external-secrets kubernetes v0.1.0
+iam operations v0.1.9                    same version ---> iam operations v0.1.9
+imgpkg global v0.3.5                     same version ---> imgpkg global v0.3.5
+insight kubernetes v1.10.0               same version ---> insight kubernetes v1.10.0
+isolated-cluster global v0.32.2          upgradable to --> isolated-cluster global v0.33.1
+[i] Installed plugin 'isolated-cluster:v0.33.1' with target 'global'
+[ok] successfully upgraded plugin 'isolated-cluster'
+management-cluster kubernetes v0.32.2    upgradable to --> management-cluster kubernetes v0.33.1
+[i] Installed plugin 'management-cluster:v0.33.1' with target 'kubernetes'
+[ok] successfully upgraded plugin 'management-cluster'
+management-cluster operations v0.1.4     same version ---> management-cluster operations v0.1.4
+package kubernetes v0.35.0               same version ---> package kubernetes v0.35.0
+pinniped-auth global v0.32.2             upgradable to --> pinniped-auth global v3.1.0
+[i] Installed plugin 'pinniped-auth:v3.1.0' with target 'global'
+[ok] successfully upgraded plugin 'pinniped-auth'
+policy operations v0.1.12                same version ---> policy operations v0.1.12
+project global v0.2.0                    upgradable to --> project global v0.2.2
+[x] Failed to install plugin 'project:v0.2.2' with target 'global'
+[x] : could not write file: write /root/.local/share/tanzu-cli/project/v0.2.2_b6ef98ae2dcd91b74f4827ad72c69fec755d5841dde47602fd7346b1c2de5c73_global: no space left on device
+provider-eks-cluster operations v0.1.4   same version ---> provider-eks-cluster operations v0.1.4
+rbac global v0.1.1                       upgradable to --> rbac global v0.1.2
+[x] Failed to install plugin 'rbac:v0.1.2' with target 'global'
+[x] : could not write file: write /root/.local/share/tanzu-cli/rbac/v0.1.2_4cf8c0b51c5357e95b29266cc0b1ba3c4da69e8000a77a908c627453b1cc07ea_global: no space left on device
+resource global v0.1.0                   upgradable to --> resource global v0.2.1
+[x] Failed to install plugin 'resource:v0.2.1' with target 'global'
+[x] : could not write file: write /root/.local/share/tanzu-cli/resource/v0.2.1_66d905f3f70441f9331712d1fb07f0f7f0b581a9398638ba8a8a744d114b05c4_global: no space left on device
+secret kubernetes v0.33.1                same version ---> secret kubernetes v0.33.1
+services kubernetes v0.10.0              upgradable to --> services kubernetes v0.11.1
+[x] Failed to install plugin 'services:v0.11.1' with target 'kubernetes'
+[x] : could not write file: write /root/.local/share/tanzu-cli/services/v0.11.1_6143f5f61967d15e3fd81005b42a2abacf28bea978f5f8956a5ae3501f4f8afe_kubernetes: no space left on device
+space global v0.2.0                      upgradable to --> space global v0.2.2
+[x] Failed to install plugin 'space:v0.2.2' with target 'global'
+[x] : could not write file: write /root/.local/share/tanzu-cli/space/v0.2.2_1da610ebf7b1404963dd129c3da27632e530d0d1ce581ebc6793c5aef634d49d_global: no space left on device
+telemetry global v1.1.0                  same version ---> telemetry global v1.1.0
+telemetry kubernetes v0.33.1             same version ---> telemetry kubernetes v0.33.1
+----------------------------------------------------------------------------------------
+[root@orfdns ~]# ./tanzupluginanalysis.sh
+----------------------------------------------------------------------------------------
+accelerator kubernetes v1.11.0           same version ---> accelerator kubernetes v1.11.0
+apply operations v0.1.7                  same version ---> apply operations v0.1.7
+apps kubernetes v0.13.0                  same version ---> apps kubernetes v0.13.0
+appsv2 global v0.3.0                     same version ---> appsv2 global v0.3.0
+build global v0.9.2                      same version ---> build global v0.9.2
+build-service kubernetes v1.0.0          same version ---> build-service kubernetes v1.0.0
+clustergroup operations v0.1.10          same version ---> clustergroup operations v0.1.10
+cluster operations v0.2.7                same version ---> cluster operations v0.2.7
+context mission-control v0.1.15          same version ---> context mission-control v0.1.15
+ekscluster operations v0.1.4             same version ---> ekscluster operations v0.1.4
+external-secrets kubernetes v0.1.0       same version ---> external-secrets kubernetes v0.1.0
+iam operations v0.1.9                    same version ---> iam operations v0.1.9
+imgpkg global v0.3.5                     same version ---> imgpkg global v0.3.5
+insight kubernetes v1.10.0               same version ---> insight kubernetes v1.10.0
+isolated-cluster global v0.33.1          same version ---> isolated-cluster global v0.33.1
+management-cluster kubernetes v0.33.1    same version ---> management-cluster kubernetes v0.33.1
+management-cluster operations v0.1.4     same version ---> management-cluster operations v0.1.4
+package kubernetes v0.35.0               same version ---> package kubernetes v0.35.0
+pinniped-auth global v3.1.0              same version ---> pinniped-auth global v3.1.0
+policy operations v0.1.12                same version ---> policy operations v0.1.12
+project global v0.2.0                    upgradable to --> project global v0.2.2
+provider-eks-cluster operations v0.1.4   same version ---> provider-eks-cluster operations v0.1.4
+rbac global v0.1.1                       upgradable to --> rbac global v0.1.2
+resource global v0.1.0                   upgradable to --> resource global v0.2.1
+secret kubernetes v0.33.1                same version ---> secret kubernetes v0.33.1
+services kubernetes v0.10.0              upgradable to --> services kubernetes v0.11.1
+space global v0.2.0                      upgradable to --> space global v0.2.2
+telemetry global v1.1.0                  same version ---> telemetry global v1.1.0
+telemetry kubernetes v0.33.1             same version ---> telemetry kubernetes v0.33.1
+----------------------------------------------------------------------------------------
+[root@orfdns ~]#
+
+```
+
+
